@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
 
+<<<<<<< HEAD
   # GET /comments
   # GET /comments.json
   def index
@@ -63,11 +64,52 @@ class CommentsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+=======
+  respond_to :html
+
+  def index
+    @comments = Comment.all
+    respond_with(@comments)
+  end
+
+  def show
+    respond_with(@comment)
+  end
+
+  def new
+    @comment = Comment.new
+    respond_with(@comment)
+  end
+
+  def edit
+  end
+
+  def create
+    @comment = Comment.new(comment_params)
+    @comment.save
+    respond_with(@comment)
+  end
+
+  def update
+    @comment.update(comment_params)
+    respond_with(@comment)
+  end
+
+  def destroy
+    @comment.destroy
+    respond_with(@comment)
+  end
+
+  private
+>>>>>>> 6a989583507d28cc308bca3599a517af61caa9c0
     def set_comment
       @comment = Comment.find(params[:id])
     end
 
+<<<<<<< HEAD
     # Never trust parameters from the scary internet, only allow the white list through.
+=======
+>>>>>>> 6a989583507d28cc308bca3599a517af61caa9c0
     def comment_params
       params.require(:comment).permit(:user_name, :body, :event_id)
     end

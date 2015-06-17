@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150617053714) do
+=======
+ActiveRecord::Schema.define(version: 20150617053411) do
+>>>>>>> 6a989583507d28cc308bca3599a517af61caa9c0
 
   create_table "comments", force: true do |t|
     t.string   "user_name"
