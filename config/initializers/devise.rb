@@ -6,7 +6,11 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` on Rails 4+ applications as its `secret_key`
   # by default. You can change it below and use your own secret key.
+<<<<<<< HEAD
+  # config.secret_key = 'b6ddc47b57f8214576d89cfb6a060d7e07ac863355ef0cd122fd02d5b1fdb143e41af3849483d29ae7310b862de4c323641ab4c7a8b6921ec22a294754734ef1'
+=======
   # config.secret_key = '692bcd9a70c782bdc6f550aae21537d1c83d25fba092a50290fe1063833fa76b6dbb9590aeb373339aa9b675c8f85ab0e987f48500c0123f128e2bedf75a72d0'
+>>>>>>> 6a989583507d28cc308bca3599a517af61caa9c0
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -99,7 +103,11 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
+<<<<<<< HEAD
+  # config.pepper = 'f074a9821ea9eefcf7e90b15a95d21d3d1a47c0a6ce22dd95a7bc0da2a6708a75da1a85e1663b82a3a3e55896020ce30174a1ffc5fb08a30f0d8455dcd64905d'
+=======
   # config.pepper = '317fce94a52ee7ff8af18e43a7de78b6c64d5355416bfba592fdc56f459fccd8f85a959887db49fc68e76d8351b0484538d97f3a898461a018b5f7851efcd20e'
+>>>>>>> 6a989583507d28cc308bca3599a517af61caa9c0
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -211,7 +219,11 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
+<<<<<<< HEAD
   # config.scoped_views = false
+=======
+  config.scoped_views = true
+>>>>>>> 6a989583507d28cc308bca3599a517af61caa9c0
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
