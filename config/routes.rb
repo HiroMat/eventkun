@@ -2,8 +2,13 @@ Rails.application.routes.draw do
   devise_for :users
   resources :comments
 
+<<<<<<< HEAD
+  resources :events
+  root to: redirect('/events')
+=======
   root to: redirect('/events')
   resources :events
+>>>>>>> 6a989583507d28cc308bca3599a517af61caa9c0
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

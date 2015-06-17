@@ -9,7 +9,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<<<<<<< HEAD
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+=======
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+>>>>>>> 6a989583507d28cc308bca3599a517af61caa9c0
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -21,6 +25,21 @@
       <a class="navbar-brand" href="/">The Idea app</a>
     </div>
     <div class="collapse navbar-collapse">
+<<<<<<< HEAD
+      
+      <p class="navbar-text pull-right">
+<% if user_signed_in? %>
+  Logged in as <strong><%= current_user.email %></strong>.
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
+      
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/events">Events</a></li>
+=======
       <p class="navbar-text pull-right">
         <% if user_signed_in? %>
           Logged in as <strong><%= current_user.email %></strong>.
@@ -32,11 +51,28 @@
         <% end %>
       <ul class="nav navbar-nav">
         <li class="active"><a href="/events">Event</a></li>
+>>>>>>> 6a989583507d28cc308bca3599a517af61caa9c0
         <li ><%= link_to 'New Event', new_event_path %></li>
       </ul>
     </div>
   </div>
 </nav>
+<<<<<<< HEAD
+
+<div class="container">
+  
+  <% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+  
+  <%= yield %>
+</div>
+
+  <footer>
+=======
   
 <div class="container">
   <% if notice %>
@@ -49,10 +85,16 @@
 </div>
 
 <footer>
+>>>>>>> 6a989583507d28cc308bca3599a517af61caa9c0
   <div class="container">
     Rails Girls 2015
   </div>
 </footer>
+<<<<<<< HEAD
+<script src="//railsgirls.com/assets/bootstrap.js"></script>
+  
+=======
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+>>>>>>> 6a989583507d28cc308bca3599a517af61caa9c0
 </body>
 </html>

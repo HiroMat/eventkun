@@ -1,6 +1,10 @@
 <h1>Listing comments</h1>
 
+<<<<<<< HEAD
+<table>
+=======
 <table class="table">
+>>>>>>> 6a989583507d28cc308bca3599a517af61caa9c0
   <thead>
     <tr>
       <th>User name</th>
@@ -16,9 +20,15 @@
         <td><%= comment.user_name %></td>
         <td><%= comment.body %></td>
         <td><%= comment.event_id %></td>
+<<<<<<< HEAD
+        <td><%= link_to 'Show', comment %></td>
+        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+=======
         <td><%= link_to '表示', comment %></td>
         <td><%= link_to '編集', edit_comment_path(comment) %></td>
         <td><%= link_to '削除', comment, method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %></td>
+>>>>>>> 6a989583507d28cc308bca3599a517af61caa9c0
       </tr>
     <% end %>
   </tbody>
