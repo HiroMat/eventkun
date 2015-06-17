@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
-<<<<<<< HEAD
+
   # GET /events
   # GET /events.json
   def index
@@ -73,7 +73,7 @@ class EventsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-=======
+
   respond_to :html
 
   def index
@@ -116,7 +116,6 @@ class EventsController < ApplicationController
       @comment = @event.comments.build
     end
 
->>>>>>> 6a989583507d28cc308bca3599a517af61caa9c0
     def event_params
       params.require(:event).permit(:name, :description, :picture)
     end
