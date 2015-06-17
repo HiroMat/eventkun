@@ -1,5 +1,4 @@
 
-
 <div>
   <div>
     <p><FONT size = "5"><b>イベント名: </b><%= @event.name %></FONT></p>
@@ -18,7 +17,6 @@
   <div>
     <h3>参加者リスト</h3>
     <% @comments.each do |comment| %>
-  
     <div>
       <p>
         <strong><%= comment.user_name %></strong>
@@ -28,8 +26,5 @@
     </div>
     <% end %>
     <%= render 'comments/form' %>
-    
   </div>
-
- 
 </div>
