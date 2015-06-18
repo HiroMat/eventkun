@@ -1,12 +1,29 @@
-
 <div>
-  <div>
-    <p><FONT size = "5"><b>イベント名: </b><%= @event.name %></FONT></p>
-    <p><FONT size = "5"><b>　日時　　: </b> <!-- 日時を表示 --> </FONT>
-    <p><FONT size = "5"><b>　備考　　: </b><%= @event.description %></FONT></p>
+  
+  <div style= "position:absolute; top:100px; left:50px;">
+    <Font size = "4">
+    <table>
+      <tr>
+        <td><b>イベント名: </b></td>
+        <td><%= @event.name %></td>
+      </tr>
+      <tr>
+        <td><b>開始日時:</b></td>
+        <td><%= @event.startdate %></td>
+      </tr>
+      <tr>
+        <td><b>終了日時:</b></td>
+        <td><%= @event.enddate %></td>
+      </tr>
+      <tr>
+        <td><b>備考:</b></td>
+        <td><%= @event.description %></td>
+      </tr>
+    </table>
+    </Font>
   </div>
-   
-  <div>
+  
+  <div style= "position:absolute; top:150px; left:500px;">
     <p>
       <%= link_to '編集', edit_event_path(@event) %> |
       <%= link_to '削除', @event, data: { confirm: 'Are you sure?' }, method: :delete %> |
@@ -14,17 +31,28 @@
     </p>
   </div>
   
-  <div>
-    <h3>参加者リスト</h3>
-    <% @comments.each do |comment| %>
-    <div>
-      <p>
-        <strong><%= comment.user_name %></strong>
-        <%= comment.body %>
-        <%= link_to '削除', comment_path(comment), method: :delete, data: { confirm: '削除してもよろしいですか？' } %>
-      </p>
-    </div>
-    <% end %>
+  <div style= "position:absolute; top:350px; left:50px;">
+    <p><b><Font size = "4">参加者リスト</Font></b></p>
+      <table>
+        <tr>
+          <td width="50"><b>名前</b></td>
+          <td><b>コメント</b></td>
+          <td></td>
+        </tr>
+        <% @comments.each do |comment| %>
+          <tr>
+            <td width="50"><strong><%= comment.user_name %></strong></td>
+            <td><%= comment.body %></td>
+            <td><%= link_to '削除', comment_path(comment), method: :delete, data: { confirm: '削除してもよろしいですか？' } %></td>
+          </tr>
+        <% end %>
+      </table>
+  </div>
+  
+  <div style= "position:absolute; top:350px; left:500px;">
+    <p><b>参加登録</b></p>
+    <br>
     <%= render 'comments/form' %>
   </div>
+  
 </div>
