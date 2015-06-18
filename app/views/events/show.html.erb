@@ -26,7 +26,7 @@
   <div style= "position:absolute; top:150px; left:500px;">
     <p>
       <%= link_to '編集', edit_event_path(@event) %> |
-      <%= link_to '削除', @event, data: { confirm: 'Are you sure?' }, method: :delete %> |
+      <%= link_to '削除', @event, data: { confirm: '削除してもよろしいですか？' }, method: :delete %> |
       <%= link_to '戻る', events_path %>
     </p>
   </div>
@@ -38,12 +38,14 @@
           <td width="50"><b>名前</b></td>
           <td><b>コメント</b></td>
           <td></td>
+          <td></td>
         </tr>
         <% @comments.each do |comment| %>
           <tr>
             <td width="50"><strong><%= comment.user_name %></strong></td>
             <td><%= comment.body %></td>
-            <td><%= link_to '削除', comment_path(comment), method: :delete, data: { confirm: '削除してもよろしいですか？' } %></td>
+            <td width="50"><%= link_to '編集', edit_comment_path(comment) %>
+            <td width="50"><%= link_to '削除', events_path, method: :delete, data: { confirm: '削除してもよろしいですか？' } %></td>
           </tr>
         <% end %>
       </table>

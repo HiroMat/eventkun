@@ -1,19 +1,15 @@
+<h4>この内容で登録します。</h4>
 
 <p>
-  <strong>User name:</strong>
+  <strong>名前:</strong>
   <%= @comment.user_name %>
 </p>
 
 <p>
-  <strong>Body:</strong>
+  <strong>コメント:</strong>
   <%= @comment.body %>
 </p>
+<br>
 
-<p>
-  <strong>Event:</strong>
-  <%= @comment.event_id %>
-</p>
-
-<%= link_to '編集', edit_comment_path(@comment) %> |
+<%= link_to '編集', edit_comment_path(@comment) %>|
 <%= link_to '戻る', comments_path %>
-
