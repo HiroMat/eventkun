@@ -11,19 +11,34 @@
    <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :名前 %><br>
     <%= f.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= f.label :date %><br>
+ 　<div class="field">
+    <%= f.label :開始時刻 %><br>
     <%= f.datetime_select :date %>
   </div>
 
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.label :終了時刻 %><br>
+    <%= f.datetime_select :date %>
   </div>
+
+  <br>
+  
+  <div class="field">
+    <%= f.label :備考 %><br>
+    <%= f.text_area :description %>
+  </div>  
+  
+  <br>
+  
+  <p>公開範囲<br>
+    <input type="radio" name="q1" value="その1"> 全社
+    <input type="radio" name="q1" value="その2"> 関係者
+  </p>
+
   <div class="actions">
     <%= f.submit %>
   </div>
