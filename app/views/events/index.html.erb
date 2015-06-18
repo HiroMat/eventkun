@@ -1,43 +1,20 @@
 
 <table border>
-        <caption>全社員向けイベント</caption>
-        <tr>
-        <th>1.イベント名</th> <th>2.開始日時  </th> <th>3.終了日時</th>  <th>4.備考</th>
-        </tr>
-<% @events.in_groups_of(1) do |group| %>
-  <div class="row">
-    <% group.compact.each do |event| %>
-      <div class="col-md-4">
-        <tr>
-          <td><%= link_to event.name, event %></td> <td><%=  event.startdate %></td> <td><%=  event.enddate %></td>　<td><%= event.description %></td>
-        </tr>
-      </div>
-    <% end %>
-  </div>
-<% end %>
-  
-</table>
-
-<table border>
-        <caption>参加予定イベント</caption>
-        <tr>
-        <th>1.イベント名</th> <th>2.開始日時  </th> <th>3.終了日時</th>  <th>4.備考</th>
-        </tr>
-  
-<% @events.in_groups_of(1) do |group| %>
-  <div class="row">
-    <% group.compact.each do |event| %>
-      <div class="col-md-4">
-        <tr>
-          
-          <td><%= link_to event.name, event %></td> <td><%=  event.startdate %></td> <td><%=  event.enddate %></td> <td><%= event.description %></td>
-          
-        </tr>
-      </div>
-    <% end %>
-  </div>
-<% end %>
-  
+  <caption>全社員向けイベント</caption>
+  <tr>
+    <th>1.イベント名</th> <th>2.開始日時  </th> <th>3.終了日時</th>  <th>4.備考</th>
+  </tr>
+  <% @events.in_groups_of(1) do |group| %>
+    <div class="row">
+      <% group.compact.each do |event| %>
+        <div class="col-md-4">
+          <tr>
+            <td><%= link_to event.name, event %></td> <td><%=  event.startdate %></td> <td><%=  event.enddate %></td>　<td><%= event.description %></td>
+          </tr>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
 </table>
 
 <p><FONT size = "5"><b>関係者向けのイベントは</b><%= link_to 'こちら', pages_executive_path  %></FONT></p>

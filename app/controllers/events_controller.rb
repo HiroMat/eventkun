@@ -3,7 +3,7 @@ class EventsController < ApplicationController
   respond_to :html
 
   def index
-    @events = Event.all
+    @events = Event.where(:AoE => '1')
     respond_with(@events)
   end
 
@@ -43,6 +43,6 @@ class EventsController < ApplicationController
     end
 
     def event_params
-      params.require(:event).permit(:name, :description , :picture, :startdate, :enddate)
+      params.require(:event).permit(:name, :description , :picture, :startdate, :enddate, :AoE)
     end
 end

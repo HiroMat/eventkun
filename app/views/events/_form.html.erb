@@ -11,7 +11,7 @@
    <% end %>
 
   <div class="field">
-    <%= f.label :名前 %><br>
+    <%= f.label :イベント名 %><br>
     <%= f.text_field :name %>
   </div>
 
@@ -35,8 +35,8 @@
   <br>
   
   <p>公開範囲<br>
-    <input type="radio" name="q1" value="その1"> 全社
-    <input type="radio" name="q1" value="その2"> 関係者
+    <label><%= f.radio_button :AoE, "1" %>全社</label>
+    <label><%= f.radio_button :AoE, "2" %>関係者</label>
   </p>
 
   <div class="actions">
