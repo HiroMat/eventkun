@@ -9,7 +9,7 @@
     <% group.compact.each do |event| %>
       <div class="col-md-4">
         <tr>
-        <td><%= link_to event.name, event %></td> <td> event.date </td> <td><%= event.description %></td>
+        <td><%= link_to event.name, event %></td> <td><%=  event.date %></td> <td><%= event.description %></td>
         </tr>
       </div>
     <% end %>
@@ -29,7 +29,7 @@
     <% group.compact.each do |event| %>
       <div class="col-md-4">
         <tr>
-          <td><%= link_to event.name, event %></td> <td> event.date </td> <td><%= event.description %></td>
+          <td><%= link_to event.name, event %></td> <td><%=  event.date %></td> <td><%= event.description %></td>
         </tr>
       </div>
     <% end %>
@@ -37,4 +37,6 @@
 <% end %>
   
 </table>
+
+<p><FONT size = "5"><b>関係者向けのイベントは</b><%= link_to 'こちら',  events_path %></FONT></p>
 

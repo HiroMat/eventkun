@@ -13,7 +13,7 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
-    #respond_with(@event)
+    respond_with(@event)
   end
 
   def edit
@@ -43,6 +43,6 @@ class EventsController < ApplicationController
     end
 
     def event_params
-      params.require(:event).permit(:name, :description , :picture)
+      params.require(:event).permit(:name, :description , :picture, :date)
     end
 end
