@@ -30,6 +30,10 @@ th { border-bottom: 1px solid #DDD; }
 }
 footer {
   background-color: #ebebeb;
-  padding: 38px 0;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  
 }
 
