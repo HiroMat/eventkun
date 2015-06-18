@@ -4,8 +4,8 @@
     <Font size = "4">
     <table>
       <tr>
-        <td><b>イベント名: </b></td>
-        <td><%= @event.name %></td>
+        <td><b>イベント名:</b></td>
+        <td><b><%= @event.name %></b></td>
       </tr>
       <tr>
         <td><b>開始日時:</b></td>
@@ -23,35 +23,35 @@
     </Font>
   </div>
   
-  <div style= "position:absolute; top:150px; left:500px;">
-    <p>
+  <div style= "position:absolute; top:150px; left:550px;">
+    <p><Font size = "4">
       <%= link_to '編集', edit_event_path(@event) %> |
       <%= link_to '削除', @event, data: { confirm: '削除してもよろしいですか？' }, method: :delete %> |
       <%= link_to '戻る', events_path %>
-    </p>
+    </Font></p>
   </div>
   
   <div style= "position:absolute; top:350px; left:50px;">
     <p><b><Font size = "4">参加者リスト</Font></b></p>
       <table>
         <tr>
-          <td width="50"><b>名前</b></td>
-          <td><b>コメント</b></td>
+          <td width="100"><b>名前</b></td>
+          <td width="200"><b>コメント</b></td>
           <td></td>
           <td></td>
         </tr>
         <% @comments.each do |comment| %>
           <tr>
-            <td width="50"><strong><%= comment.user_name %></strong></td>
-            <td><%= comment.body %></td>
+            <td width="100"><strong><%= comment.user_name %></strong></td>
+            <td width="200"><%= comment.body %></td>
             <td width="50"><%= link_to '編集', edit_comment_path(comment) %>
-            <td width="50"><%= link_to '取り消し', comment_path(comment), method: :delete, data: { confirm: '参加を取り消してもよろしいですか？' } %></td>
+            <td width="100"><%= link_to '取り消し', comment_path(comment), method: :delete, data: { confirm: '参加を取り消してもよろしいですか？' } %></td>
           </tr>
         <% end %>
       </table>
   </div>
   
-  <div style= "position:absolute; top:350px; left:500px;">
+  <div style= "position:absolute; top:350px; left:550px;">
     <p><b>参加登録</b></p>
     <br>
     <%= render 'comments/form' %>
