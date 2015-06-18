@@ -1,32 +1,4 @@
-<h1>Listing comments</h1>
-
-<table class="table">
-
-  <thead>
-    <tr>
-      <th>User name</th>
-      <th>Body</th>
-      <th>Event</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @comments.each do |comment| %>
-      <tr>
-        <td><%= comment.user_name %></td>
-        <td><%= comment.body %></td>
-        <td><%= comment.event_id %></td>
-
-        <td><%= link_to '表示', comment %></td>
-        <td><%= link_to '編集', edit_comment_path(comment) %></td>
-        <td><%= link_to '削除', comment, method: :delete, data: { confirm: '本当に削除してもよろしいですか？' } %></td>
-
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<h4>参加を取り消しました。</h4>
 
 <br>
-
-<%= link_to 'New Comment', new_comment_path %>
+<%= link_to '戻る', events_path %>
