@@ -1,0 +1,13 @@
+<h1>関係者ページ</h1>
+
+
+<p>関係者用パスワードを入力してください<br>
+
+<input type="button" value="パスワードを入力して秘密のページへアクセスする" onclick="gate();">
+
+<script type="text/javascript">
+   function gate() {
+      var UserInput = prompt("パスワードを入力して下さい:","");
+      location.href = UserInput + ".html";
+   }
+  </script>

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'pages/executive'
+  get 'pages/executive1'
+
   devise_for :users
   resources :comments
 
