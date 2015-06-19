@@ -38,3 +38,14 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+table tr th{
+    padding:3px;
+    background-color:#bbb;
+    color:#fff;
+    padding:3px 6px 3px 3px;
+}
+ 
+table tr.even td{
+    background-color:#eee;
+}
