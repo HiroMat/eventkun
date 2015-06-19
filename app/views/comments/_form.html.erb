@@ -13,8 +13,9 @@
 
   <div class="field">
     <%= f.label :名前 %><br>
-    <%= f.text_field :user_name %>
+    <%= f.text_field :user_name,value:current_user.handle_name, :readonly => true %>
   </div>
+
   <div class="field">
     <%= f.label :コメント %><br>
     <%= f.text_area :body %>
