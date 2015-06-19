@@ -4,11 +4,10 @@
     <th>1.イベント名</th> <th>2.開始日時  </th> <th>3.終了日時</th>  <th>4.備考</th>
   </tr>
   <% @events.in_groups_of(1) do |group| %>
-    <div class="row">
+      <!--<div class="row"> -->
       <% group.compact.each do |event| %>
-        <div class="col-md-4">
+       <!-- <div class="col-md-4"> -->
           <tr>
-            
             <td><%= link_to event.name, event %></td> <td><%=  event.startdate %></td> <td><%=  event.enddate %></td>　<td><%= event.description %></td>
           </tr>
         </div>
