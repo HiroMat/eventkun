@@ -1,6 +1,17 @@
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("table").each(function(){
+    jQuery(this).find("tr:even").addClass("even");
+  });
+});
+</script>
+
 <div>
   
   <div style= "position:absolute; top:100px; left:50px;">
+
     <Font size = "4">
     <table>
       <tr>
@@ -9,11 +20,11 @@
       </tr>
       <tr>
         <td><b>開始日時:</b></td>
-        <td><%= @event.startdate %></td>
+        <td><%= @event.startdate.strftime("%Y-%m-%d %H:%M") %></td>
       </tr>
       <tr>
         <td><b>終了日時:</b></td>
-        <td><%= @event.enddate %></td>
+        <td><%= @event.enddate.strftime("%Y-%m-%d %H:%M") %></td>
       </tr>
       <tr>
         <td><b>備考:</b></td>
@@ -21,9 +32,10 @@
       </tr>
     </table>
     </Font>
+   
   </div>
   
-  <div style= "position:absolute; top:150px; left:550px;">
+  <div style= "position:absolute; top:150px; left:600px;">
     <p><Font size = "4">
       <%= link_to '編集', edit_event_path(@event) %> |
       <%= link_to '削除', @event, data: { confirm: '削除してもよろしいですか？' }, method: :delete %> |
@@ -31,15 +43,13 @@
     </Font></p>
   </div>
   
-  <div style= "position:absolute; top:350px; left:50px;">
+  <div style= "position:absolute; top:350px; left:50px; margin-bottom:100px;">
     <p><b><Font size = "4">参加者リスト</Font></b></p>
       <table>
-        <tr>
-          <td width="100"><b>名前</b></td>
-          <td width="200"><b>コメント</b></td>
-          <td></td>
-          <td></td>
-        </tr>
+        <th>名前</th>
+        <th>コメント</th>
+        <th></th>
+        <th></th>
         <% @comments.each do |comment| %>
           <tr>
             <td width="100"><strong><%= comment.user_name %></strong></td>
@@ -51,7 +61,7 @@
       </table>
   </div>
   
-  <div style= "position:absolute; top:350px; left:550px;">
+  <div style= "position:absolute; top:350px; left:600px;">
     <p><b>参加登録</b></p>
     
     <%= render 'comments/form' %>

@@ -16,7 +16,8 @@
 
 body { 
   padding-top: 60px;
-  padding-bottom : 60px;
+  padding-bottom: 60px;
+  background-image : url(b107.gif);
 }
 footer { margin-top: 100px; }
 table, td, th { vertical-align: middle; border: none; }
@@ -37,4 +38,15 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+table tr th{
+    padding:3px;
+    background-color:#bbb;
+    color:#fff;
+    padding:3px 6px 3px 3px;
+}
+ 
+table tr.even td{
+    background-color:#eee;
 }
