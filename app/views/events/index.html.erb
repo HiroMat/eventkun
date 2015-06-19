@@ -10,12 +10,14 @@
           <tr>
             <td><%= link_to event.name, event %></td> <td><%=  event.startdate %></td> <td><%=  event.enddate %></td>　<td><%= event.description %></td>
           </tr>
-        </div>
+        
       <% end %>
-    </div>
+    
   <% end %>
 </table>
 
 <br>
+    
 <p><FONT size = "5"><b>関係者向けのイベントは</b><%= link_to 'こちら', pages_executive_path  %></FONT></p>
+
 
