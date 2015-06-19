@@ -44,7 +44,12 @@ $(document).ready(function(){
   </div>
   
   <div style= "position:absolute; top:350px; left:50px; margin-bottom:100px;">
-    <p><b><Font size = "4">参加者リスト</Font></b></p>
+    <% num = 0 %>
+    <% @comments.each do |comment| %>
+      <% num = num + 1 %>
+    <% end %>
+    
+    <p><b><Font size = "4">参加者リスト  現在<%= num %>名</Font></b></p>
       <table>
         <th>名前</th>
         <th>コメント</th>
