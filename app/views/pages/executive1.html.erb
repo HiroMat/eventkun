@@ -8,7 +8,7 @@
     <% group.compact.each do |event| %>
       <div class="col-md-4">
         <tr>
-          <td><%= link_to event.name, event %></td> <td><%=  event.startdate %></td> <td><%=  event.enddate %></td>　<td><%= event.description %></td>
+          <td><%= link_to event.name, event %></td> <td><%=  event.startdate.strftime("%Y-%m-%d %H:%M") %></td> <td><%=  event.enddate.strftime("%Y-%m-%d %H:%M") %></td>　<td><%= event.description %></td>
         </tr>
       </div>
     <% end %>
