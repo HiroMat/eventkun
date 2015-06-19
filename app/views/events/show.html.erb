@@ -9,11 +9,11 @@
       </tr>
       <tr>
         <td><b>開始日時:</b></td>
-        <td><%= @event.startdate %></td>
+        <td><%= @event.startdate.strftime("%Y-%m-%d %H:%M") %></td>
       </tr>
       <tr>
         <td><b>終了日時:</b></td>
-        <td><%= @event.enddate %></td>
+        <td><%= @event.enddate.strftime("%Y-%m-%d %H:%M") %></td>
       </tr>
       <tr>
         <td><b>備考:</b></td>
