@@ -8,8 +8,14 @@ $(document).ready(function(){
 });
 </script>
 
+<% num = 0 %>
+<% @events.each do |eve| %>
+  <% num = num+1 %>
+<% end %>
+
 <table border>
-  <caption>関係者向けイベント</caption>
+  <caption>関係者向けイベント<br>
+    現在のイベント数: <%= num %> </caption>
   <tr>
     <th>1.イベント名</th> <th>2.開始日時  </th> <th>3.終了日時</th>  <th>4.備考</th>
   </tr>

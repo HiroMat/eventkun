@@ -8,15 +8,21 @@ $(document).ready(function(){
 });
 </script>
 
+<% num = 0 %>
+<% @events.each do |eve| %>
+  <% num = num+1 %>
+<% end %>
+
 <table border>
-  <caption>全社員対象イベント</caption>
+  <caption>全社員対象イベント　<br>
+    現在のイベント数: <%= num %> </caption>
   <tr>
     <th>1.イベント名</th> <th>2.開始日時  </th> <th>3.終了日時</th>  <th>4.備考</th>
   </tr>
   <% @events.in_groups_of(1) do |group| %>
- 
-      <% group.compact.each do |event| %>
       
+      <% group.compact.each do |event| %>
+        
           <tr>
             <td><%= link_to event.name, event %></td> <td><%=  event.startdate.strftime("%Y-%m-%d %H:%M") %></td> <td><%=  event.enddate.strftime("%Y-%m-%d %H:%M") %></td>　<td><%= event.description %></td>
           </tr>
@@ -26,7 +32,7 @@ $(document).ready(function(){
 </table>
 
 <br>
-    
+
 <p><FONT size = "5"><b>関係者向けのイベントは</b><%= link_to 'こちら', pages_executive_path  %></FONT></p>
 
 
