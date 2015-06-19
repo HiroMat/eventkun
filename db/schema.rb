@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20150618073038) do
     t.string   "picture"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.datetime "date"
     t.datetime "startdate"
     t.datetime "enddate"
     t.integer  "AoE"
